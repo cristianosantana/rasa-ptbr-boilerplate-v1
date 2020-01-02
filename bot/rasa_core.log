@@ -163,3 +163,164 @@ There is a memorised next action '0'
 Predicted next action using policy_2_MemoizationPolicy
 Predicted next action 'action_listen' with prob 1.00.
 Action 'action_listen' ended with events '[]'
+Rasa process starting
+From /usr/local/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from /models/nlu/current/component_4_EmbeddingIntentClassifier.ckpt
+Scheduler started
+Looking for jobs to run
+No jobs; waiting until a job is added
+From /usr/local/lib/python3.6/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /usr/local/lib/python3.6/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /usr/local/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+From /usr/local/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'ola' with intent '{'name': 'linguagens', 'confidence': 0.8623433113098145}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [{}, {'intent_linguagens': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '17'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_linguagens' with prob 1.00.
+Action 'utter_linguagens' ended with events '[]'
+Bot utterance 'BotUttered(text: Poderíamos falar de algo melhor
+
+Não é mesmo, $user ?! kkk
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_linguagens': 1.0, 'prev_action_listen': 1.0}, {'intent_linguagens': 1.0, 'prev_utter_linguagens': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'sim, qual é o seu time favorito?' with intent '{'name': 'time', 'confidence': 0.9246201515197754}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'intent_linguagens': 1.0, 'prev_utter_linguagens': 1.0}, {'intent_time': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_fallback' with prob 1.00.
+Encountered an exception while running action 'action_fallback'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+The model predicted the custom action 'action_fallback' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 345, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 341, in run
+    "".format(self.name(), DOCS_BASE_URL))
+Exception: The model predicted the custom action 'action_fallback' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Action 'action_fallback' ended with events '[]'
+Current tracker state [{'intent_time': 1.0, 'prev_action_listen': 1.0}, {'intent_time': 1.0, 'prev_action_fallback': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'sim' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 9 events
+Current slot values: 
+
+NLU confidence 0.0 is lower than NLU threshold 0.6. 
+Current tracker state [{'intent_time': 1.0, 'prev_action_fallback': 1.0}, {'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_fallback' with prob 1.00.
+Encountered an exception while running action 'action_fallback'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+The model predicted the custom action 'action_fallback' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 345, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 341, in run
+    "".format(self.name(), DOCS_BASE_URL))
+Exception: The model predicted the custom action 'action_fallback' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Action 'action_fallback' ended with events '[]'
+Current tracker state [{'prev_action_listen': 1.0}, {'prev_action_fallback': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'oi' with intent '{'name': 'cumprimentar', 'confidence': 0.8061021566390991}' and entities '[]'
+Logged UserUtterance - tracker now has 12 events
+Current slot values: 
+
+Current tracker state [{'prev_action_fallback': 1.0}, {'intent_cumprimentar': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'utter_cumprimentar' with prob 0.98.
+Action 'utter_cumprimentar' ended with events '[]'
+Bot utterance 'BotUttered(text: Oi, eu sou um bot, um assistente virtual!
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_cumprimentar': 1.0, 'prev_action_listen': 1.0}, {'intent_cumprimentar': 1.0, 'prev_utter_cumprimentar': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'seu filme favorito?' with intent '{'name': 'filme', 'confidence': 0.9408902525901794}' and entities '[{'start': 4, 'end': 9, 'value': 'filme', 'entity': 'filme', 'confidence': 0.9089310437681483, 'extractor': 'CRFEntityExtractor'}]'
+Logged UserUtterance - tracker now has 16 events
+Current slot values: 
+
+Current tracker state [{'intent_cumprimentar': 1.0, 'prev_utter_cumprimentar': 1.0}, {'prev_action_listen': 1.0, 'entity_filme': 1.0, 'intent_filme': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'utter_filme' with prob 0.98.
+Action 'utter_filme' ended with events '[]'
+Bot utterance 'BotUttered(text: Há tantos filmes incríveis por aí que fica difícil de eu te falar só de um
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_listen': 1.0, 'entity_filme': 1.0, 'intent_filme': 1.0}, {'prev_utter_filme': 1.0, 'entity_filme': 1.0, 'intent_filme': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'stop' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 20 events
+Current slot values: 
+
+NLU confidence 0.0 is lower than NLU threshold 0.6. 
+Current tracker state [{'prev_utter_filme': 1.0, 'entity_filme': 1.0, 'intent_filme': 1.0}, {'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_fallback' with prob 1.00.
+Encountered an exception while running action 'action_fallback'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+The model predicted the custom action 'action_fallback' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/processor.py", line 345, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 341, in run
+    "".format(self.name(), DOCS_BASE_URL))
+Exception: The model predicted the custom action 'action_fallback' but you didn't configure an endpoint to run this custom action. Please take a look at the docs and set an endpoint configuration. https://rasa.com/docs/core/customactions/
+Action 'action_fallback' ended with events '[]'
+Current tracker state [{'prev_action_listen': 1.0}, {'prev_action_fallback': 1.0}]
+There is no memorised next action
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
