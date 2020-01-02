@@ -1,0 +1,165 @@
+Rasa process starting
+From /usr/local/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from /models/nlu/current/component_4_EmbeddingIntentClassifier.ckpt
+Scheduler started
+Looking for jobs to run
+No jobs; waiting until a job is added
+From /usr/local/lib/python3.6/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /usr/local/lib/python3.6/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /usr/local/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+From /usr/local/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'ola' with intent '{'name': 'cumprimentar', 'confidence': 0.9530054330825806}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [{}, {'intent_cumprimentar': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '9'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_cumprimentar' with prob 1.00.
+Action 'utter_cumprimentar' ended with events '[]'
+Bot utterance 'BotUttered(text: Oi, eu sou um bot, um assistente virtual!
+Uhuu! Manda aí um assunto que te interessa :)
+Para aprender como você pode interagir comigo basta escrever meajuda.
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_cumprimentar': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_cumprimentar': 1.0, 'intent_cumprimentar': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'meajuda' with intent '{'name': 'o_que_sei_falar', 'confidence': 0.9477433562278748}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'prev_utter_cumprimentar': 1.0, 'intent_cumprimentar': 1.0}, {'prev_action_listen': 1.0, 'intent_o_que_sei_falar': 1.0}]
+There is a memorised next action '10'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_o_que_sei_falar' with prob 1.00.
+Action 'utter_o_que_sei_falar' ended with events '[]'
+Bot utterance 'BotUttered(text: Eu ainda não consigo entender frases muito longas, 
+para a gente ter uma conversa mais eficiente, envia pra mim
+perguntas curtas e completas, como por exemplo "qual é o seu filme favorito?"
+
+Tem alguns assuntos que eu também ainda não domino, 
+mas vou deixar você descobrir o que eu sei responder.
+Vou adorar poder bater um papo com você  ;)
+E, aí do que podemos conversar?
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_listen': 1.0, 'intent_o_que_sei_falar': 1.0}, {'prev_utter_o_que_sei_falar': 1.0, 'intent_o_que_sei_falar': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'mim indica uma musica?' with intent '{'name': 'playlist', 'confidence': 0.9428930282592773}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+
+Current tracker state [{'prev_utter_o_que_sei_falar': 1.0, 'intent_o_que_sei_falar': 1.0}, {'intent_playlist': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'utter_playlist' with prob 0.92.
+Action 'utter_playlist' ended with events '[]'
+Bot utterance 'BotUttered(text: Até que enfim você me perguntou isso
+
+Tá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_playlist': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_playlist': 1.0, 'intent_playlist': 1.0}]
+There is a memorised next action '15'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_continuar_conversa' with prob 1.00.
+Action 'utter_continuar_conversa' ended with events '[]'
+Bot utterance 'BotUttered(text: E aí, qual nosso próximo assunto?
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_playlist': 1.0, 'intent_playlist': 1.0}, {'intent_playlist': 1.0, 'prev_utter_continuar_conversa': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'adorei conversar com voce' with intent '{'name': 'elogios', 'confidence': 0.6805686950683594}' and entities '[]'
+Logged UserUtterance - tracker now has 16 events
+Current slot values: 
+
+Current tracker state [{'intent_playlist': 1.0, 'prev_utter_continuar_conversa': 1.0}, {'intent_elogios': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'utter_elogios' with prob 0.74.
+Action 'utter_elogios' ended with events '[]'
+Bot utterance 'BotUttered(text: Obrigada! É sempre bom dar e receber elogios :P
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_elogios': 1.0, 'prev_action_listen': 1.0}, {'intent_elogios': 1.0, 'prev_utter_elogios': 1.0}]
+There is a memorised next action '15'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_continuar_conversa' with prob 1.00.
+Action 'utter_continuar_conversa' ended with events '[]'
+Bot utterance 'BotUttered(text: E aí, qual nosso próximo assunto?
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_elogios': 1.0, 'prev_utter_elogios': 1.0}, {'intent_elogios': 1.0, 'prev_utter_continuar_conversa': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'tchau' with intent '{'name': 'despedir', 'confidence': 0.9618088603019714}' and entities '[]'
+Logged UserUtterance - tracker now has 22 events
+Current slot values: 
+
+Current tracker state [{'intent_elogios': 1.0, 'prev_utter_continuar_conversa': 1.0}, {'intent_despedir': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'utter_despedir' with prob 0.97.
+Action 'utter_despedir' ended with events '[]'
+Bot utterance 'BotUttered(text: Foi um prazer te ajudar!
+Sempre que precisar, volte aqui!
+Até a próxima!
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_despedir': 1.0, 'prev_action_listen': 1.0}, {'intent_despedir': 1.0, 'prev_utter_despedir': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
